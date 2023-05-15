@@ -1,0 +1,40 @@
+
+
+        <div class="header_text">
+            {$title}
+        </div>
+
+
+        <div class="mt-5 mb-5"></div><!--gf-->
+        <div class="row">
+            {if $data}
+                    <div class="col-12 mb-5">
+                        <div class="card" style="">
+                            <div class="card-body">
+                                <div class="row mb-2">
+                                    <div class="col-6"><b>Автор:</b> {$data['autor']}</div>
+                                    <div class="col-6 ta-right"><b>Дата:</b> {$data['dat']}</div>
+                                </div>
+                                <h5 class="card-title">{$data['name']}</h5>
+                                <p class="card-text" id="">
+                                    {$data['text']}
+                                </p>
+                                <div class="row">
+                                    <div class="col-12"><b>Теги:</b>
+                                        <a href="">Раз</a>,
+                                        <a href="">Два</a>,
+                                        <a href="">Три</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6"><b>Категория:</b> {*$data['pid_name']} > {$data['cat_name']*}</div>
+                                    <div class="col-6 ta-right"><b>Просмотры:</b> {$data['views']}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            {/if}
+        </div>
+
+
+
