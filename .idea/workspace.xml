@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1ce7ba0e-28a1-4168-9b25-45aa595013a5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/conf.php" beforeDir="false" afterPath="$PROJECT_DIR$/configs/conf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/getup/goodtimes/category/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/getup/goodtimes/category/post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tinymvc/umcms/models/db_mysql_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/tinymvc/umcms/models/db_mysql_model.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="20Y5SGbiNyY2bTgNrG5t2MReNah" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Apache24/htdocs_bizum/templates/getup/goodtimes/pages&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Apache24\htdocs_bizum\templates\getup\goodtimes\pages" />
+      <recent name="C:\Apache24\htdocs_bizum\tinymvc\umcms\controllers" />
+      <recent name="C:\Apache24\htdocs_bizum\upload" />
+      <recent name="C:\Apache24\htdocs_bizum\templates\static\styles" />
+      <recent name="C:\Apache24\htdocs_bizum\templates\static\plugins" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Apache24\htdocs_bizum\templates\getup\goodtimes\audio" />
+      <recent name="C:\Apache24\htdocs_bizum\templates\static\plugins" />
+      <recent name="C:\Apache24\htdocs_bizum" />
+      <recent name="C:\Apache24\htdocs_bizum\templates\getup" />
+      <recent name="C:\Apache24\htdocs_bizum\templates\static" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1ce7ba0e-28a1-4168-9b25-45aa595013a5" name="Default Changelist" comment="" />
+      <created>1636208678936</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1636208678936</updated>
+      <workItem from="1636208680645" duration="30290000" />
+      <workItem from="1636466094965" duration="6250000" />
+      <workItem from="1636609506818" duration="1197000" />
+      <workItem from="1641907905707" duration="2563000" />
+      <workItem from="1641958461192" duration="661000" />
+      <workItem from="1642600857011" duration="4410000" />
+      <workItem from="1653922018370" duration="5855000" />
+      <workItem from="1654261893437" duration="4137000" />
+      <workItem from="1654484619145" duration="12000" />
+      <workItem from="1654748125643" duration="1170000" />
+      <workItem from="1655213255021" duration="15522000" />
+      <workItem from="1655696061552" duration="1206000" />
+      <workItem from="1657206044937" duration="596000" />
+      <workItem from="1657819851385" duration="52000" />
+      <workItem from="1660057465504" duration="14391000" />
+      <workItem from="1660655914110" duration="4424000" />
+      <workItem from="1661237872632" duration="753000" />
+      <workItem from="1661270058706" duration="614000" />
+      <workItem from="1662901088103" duration="1092000" />
+      <workItem from="1662976346994" duration="32547000" />
+      <workItem from="1663213760763" duration="595000" />
+      <workItem from="1664164661009" duration="1123000" />
+      <workItem from="1665460485037" duration="110000" />
+      <workItem from="1665583453094" duration="10809000" />
+      <workItem from="1666004816282" duration="11340000" />
+      <workItem from="1666022422831" duration="1228000" />
+      <workItem from="1667120212516" duration="3921000" />
+      <workItem from="1677417239870" duration="3262000" />
+      <workItem from="1684156593435" duration="7565000" />
+    </task>
+    <task id="LOCAL-00001" summary="first">
+      <created>1653931004037</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1653931004037</updated>
+    </task>
+    <task id="LOCAL-00002" summary="tales">
+      <created>1660058245608</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1660058245608</updated>
+    </task>
+    <task id="LOCAL-00003" summary="first">
+      <created>1660719688662</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1660719688662</updated>
+    </task>
+    <task id="LOCAL-00004" summary="first">
+      <created>1667120550061</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1667120550061</updated>
+    </task>
+    <task id="LOCAL-00005" summary="first">
+      <created>1667187783923</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1667187783923</updated>
+    </task>
+    <task id="LOCAL-00006" summary="first">
+      <created>1684158041312</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1684158041312</updated>
+    </task>
+    <task id="LOCAL-00007" summary="first">
+      <created>1684159157917</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1684159157917</updated>
+    </task>
+    <task id="LOCAL-00008" summary="first">
+      <created>1684159619661</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1684159619661</updated>
+    </task>
+    <task id="LOCAL-00009" summary="first">
+      <created>1684159709450</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1684159709450</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <MESSAGE value="tales" />
+    <MESSAGE value="first" />
+    <option name="LAST_COMMIT_MESSAGE" value="first" />
+  </component>
+</project>

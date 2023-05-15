@@ -9,8 +9,9 @@
 	define('template', 'goodtimes');
 
 	//mysql db config
-	define ( 'my_db_user', "root");
-	define ( 'my_db_pass', "0000" );
-	define ( 'my_db_serv', "localhost");
-	define ( 'my_db_db', "umcms");
+	define ( 'my_db_user', "a0818268_pomoyka");
+	define ( 'my_db_pass', "rjkzcbrb" );
+	define ( 'my_db_serv', "a0818268.xsph.ru");
+	define ( 'my_db_db', "a0818268_pomoyka");
+    //telnet a0818268.xsph.ru 3306
 ?>

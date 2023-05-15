@@ -25,7 +25,7 @@ class Db_mysql_Model extends TinyMVC_Model
         $this->error = '';
         if (!$c = mysqli_connect($this->server, $this->user, $this->pass, $this->db)) {
             $this->connect = false;
-            $this->error = "Ошибка: Невозможно подключиться к MySQL " . mysqli_connect_error();
+            $this->error = "Ошибка: Невозможно подключиться к MySQL" . mysqli_connect_error();
         }else{
             $this->connect = true;
             mysqli_set_charset($c, "utf8");
