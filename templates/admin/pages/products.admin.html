@@ -1,0 +1,90 @@
+<script src="/templates/adminoducts.admin.js"></script>
+<div class="starter-template">
+    <div class="row justify-content-between mb-5 align-items-center">
+        <div class="col-1">
+            <h1>Товары</h1>
+        </div>
+        <form class="col-5 d-flex justify-content-end" action="" method="GET">
+            <div class="mr-1">
+                <button class="btn btn-primary  my-2 my-sm-0 btn-sm" >ОК</button>
+            </div>
+            <div class="mr-1">
+                <select class="form-control-sm" name="filter_category">
+                    <option value="0">ВСЕ</option>
+                    {section name=i loop=$categories}
+                        <option {if isset($smarty.get.filter_category) && $smarty.get.filter_category == $categories[i]['id']}selected{/if} value="{$categories[i]['id']}">{$categories[i]['name']}</option>
+                    {/section}
+                </select>
+            </div>
+            <div class="mr-1">
+                <select class="form-control-sm" name="filter_brand">
+                    <option value="0">ВСЕ</option>
+                    {section name=i loop=$brands}
+                        <option {if isset($smarty.get.filter_brand) && $smarty.get.filter_brand == $brands[i]['id']}selected{/if} value="{$brands[i]['id']}">{$brands[i]['name']}</option>
+                    {/section}
+                </select>
+            </div>
+            <div>
+                <button class="btn btn-primary  my-2 my-sm-0 btn-sm" data-toggle="modal" data-target="#form-product-create" onclick="event.preventDefault()"><i class="fas fa-plus"></i></button>
+            </div>
+        </form>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Категория</th>
+                        <th scope="col">Наименование</th>
+                        <th scope="col">runame</th>
+                        <th scope="col">Штрихкод</th>
+                        <th scope="col">Брэнд</th>
+                        <th scope="col">price</th>
+                        <th scope="col">price_retail</th>
+                        <th scope="col">count</th>
+                        <th scope="col">sort</th>
+                        <th scope="col">Вкус</th>
+                        <th scope="col">Тяжесть</th>
+                        <th scope="col">Табак</th>
+                        <th scope="col">Видимость</th>
+                        <th scope="col">Действия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {section name=i loop=$products}
+                        <tr>
+                            <th scope="row" id="item-product-id-{$products[i]['id']}">{$products[i]['id']}</th>
+                            <td>{$products[i]['category_name']}</td>
+                            <td id="item-product-name-{$products[i]['id']}">{$products[i]['name']}</td>
+                            <td id="item-product-runame-{$products[i]['id']}">{$products[i]['runame']}</td>
+                            <td id="item-product-barcode-{$products[i]['id']}">{$products[i]['barcode']}</td>
+                            <td>{$products[i]['brand_name']}</td>
+                            <td id="item-product-price-{$products[i]['id']}">{$products[i]['price']}</td>
+                            <td id="item-product-price-retail-{$products[i]['id']}">{$products[i]['price_retail']}</td>
+                            <td id="item-product-count-{$products[i]['id']}">{$products[i]['count']}</td>
+                            <td id="item-product-sort-{$products[i]['id']}">{$products[i]['sort']}</td>
+                            <td>{$products[i]['taste_name']}</td>
+                            <td>{$products[i]['weight_name']}</td>
+                            <td>{if $products[i]['is_tobacco']}Да{else}Нет{/if}</td>
+                            <td>
+                                <input id="item-product-vis-{$products[i]['id']}" {if $products[i]['vis']}checked{/if} type="checkbox" disabled>
+                            </td>
+                            <td class="d-none">
+                                <p id="item-product-category-{$products[i]['id']}">{$products[i]['cat_id']}</p>
+                                <p id="item-product-brand-{$products[i]['id']}">{$products[i]['brand_id']}</p>
+                                <p id="item-product-tasty-{$products[i]['id']}">{$products[i]['taste_id']}</p>
+                                <p id="item-product-weight-{$products[i]['id']}">{$products[i]['weight_id']}</p>
+                                <input id="item-product-is-tabacco-{$products[i]['id']}" {if $products[i]['is_tobacco']}checked{/if} type="checkbox">
+                            </td>
+                            <td>
+                                <button class="btn btn-warning btn-sm" onclick="productFormOpen({$products[i]['id']})"><i class="fas fa-edit"></i></button>
+                                <button class="btn btn-danger btn-sm" onclick="productFormRemoveOpen({$products[i]['id']})" data-toggle="modal" data-target="#form-product-remove"><i class="fas fa-trash-alt" ></i></button>
+                            </td>
+                        </tr>
+                    {/section}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

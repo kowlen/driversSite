@@ -1,0 +1,70 @@
+<script type="text/javascript" src="/templates/getup/{$smarty.const.template}/calc/js/areaOfRectangle.js"></script>
+<div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="mb-3">
+                    <legend class="text">{$title}</legend>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="mb-3">
+                    <img src="/calc/areaOfRectangle/?action=img&xa=a&xb=b">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="xb" class="form-label">Единица измерения</label>
+                    <select id="unit" class="form-select">
+                        <option>мм</option>
+                        <option>см</option>
+                        <option>дм</option>
+                        <option>м</option>
+                        <option>км</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="xa" class="form-label">Расстояние а</label>
+                    <input type="number" id="xa" class="form-control" placeholder="a" value="2">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="xb" class="form-label">Расстояние b</label>
+                    <input type="number" id="xb" class="form-control" placeholder="b" value="2">
+                    <!--<select id="disabledSelect" class="form-select">
+                        <option>Disabled select</option>
+                    </select>-->
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="mb-3">
+                    <button class="btn btn-success float-end" onclick="calculate()">Рассчитать</button>
+                </div>
+            </div>
+        </div>
+
+    <!-- result -->
+    <div class="accordion mt-3" id="result">
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Результаты расчетов
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#result">
+                <div class="accordion-body">
+                    <img class="img_result" src="/calc/areaOfRectangle/?action=img&xa=a&xb=b">
+                    <div class="text desc"><b>S = a × b</b>, где <b>S</b> — площадь; <b>a, b</b> — длина и ширина.</div>
+                    <div class="text result"></div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

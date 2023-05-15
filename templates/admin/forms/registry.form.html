@@ -1,0 +1,73 @@
+<div class="modal fade bd-example-modal-lg" id="form-registry-buy" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog " role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Приход</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-lg-10">
+                            <input type="text" placeholder="Введите штрихкод" class="form-control " id="form-registry-barcode" required>
+                        </div>
+                        <div class="form-group col-lg-2">
+                            <button type="button" class="btn btn-outline-success" id="form-registry-btn-find" onclick="registryFormFind()">Найти</button>
+                        </div>
+                    </div>
+                    <div class="form-row d-none" id="form-registry-row">
+                        <div class="form-group col-lg-3">
+                            <label for="form-registry-name" class="col-form-label">Наименование:</label>
+                        </div>
+                        <div class="form-group col-lg-9">
+                            <input type="hidden" disabled class="form-control " id="form-registry-id" required>
+                            <input type="text" disabled class="form-control " id="form-registry-name" required>
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <label for="form-registry-name" class="col-form-label">Брэнд:</label>
+                        </div>
+                        <div class="form-group col-lg-9">
+                            <input type="text" disabled class="form-control " id="form-registry-brand" required>
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <label for="form-registry-name" class="col-form-label">Категория:</label>
+                        </div>
+                        <div class="form-group col-lg-9">
+                            <input type="text" disabled class="form-control " id="form-registry-category" required>
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <label for="form-registry-name" class="col-form-label">Цена(закуп.):</label>
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <input type="text" class="form-control " id="form-registry-price" required>
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <label for="form-registry-name" class="col-form-label">Цена(розн.):</label>
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <input type="text" class="form-control " id="form-registry-price-retail" required>
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <label for="form-registry-name" class="col-form-label">Остаток:</label>
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <input type="text" disabled class="form-control " id="form-registry-count" required>
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <label for="form-registry-name" class="col-form-label">Поступление:</label>
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <input type="text" class="form-control " id="form-registry-coming" required>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                <button type="button" disabled class="btn btn-primary" id="form-registry-btn-save" onclick="registryFormSave()">Сохранить</button>
+            </div>
+        </div>
+    </div>
+</div>

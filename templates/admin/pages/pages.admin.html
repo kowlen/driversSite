@@ -1,0 +1,48 @@
+<script src="/templates/adminges.admin.js"></script>
+<div class="starter-template">
+    <div class="row justify-content-between mb-5 align-items-center">
+        <div class="col-1">
+            <h1>Страницы</h1>
+        </div>
+        <div class="col-1">
+            <button class="btn btn-primary  my-2 my-sm-0 btn-sm" data-toggle="modal" data-target="#form-page-create"><i class="fas fa-plus"></i></button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">name</th>
+                        <th scope="col">title</th>
+                        <th scope="col">content</th>
+                        <th scope="col">description</th>
+                        <th scope="col">keywords</th>
+                        <th scope="col">Видимость</th>
+                        <th scope="col">Действия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {section name=i loop=$pages}
+                        <tr>
+                            <th scope="row" id="item-page-id-{$pages[i]['id']}">{$pages[i]['id']}</th>
+                            <td id="item-page-name-{$pages[i]['id']}">{$pages[i]['name']}</td>
+                            <td id="item-page-title-{$pages[i]['id']}">{$pages[i]['title']}</td>
+                            <td id="item-page-content-{$pages[i]['id']}">{$pages[i]['content']}</td>
+                            <td id="item-page-description-{$pages[i]['id']}">{$pages[i]['description']}</td>
+                            <td id="item-page-keywords-{$pages[i]['id']}">{$pages[i]['keywords']}</td>
+                            <td>
+                                <input  id="item-page-visible-{$pages[i]['id']}" type="checkbox" disabled {if $pages[i]['is_visible']} checked{/if}>
+                            </td>
+                            <td>
+                                <button class="btn btn-warning btn-sm" onclick="pageFormOpen({$pages[i]['id']})"><i class="fas fa-edit"></i></button>
+                                <button class="btn btn-danger btn-sm" onclick="pageFormRemoveOpen({$pages[i]['id']})" data-toggle="modal" data-target="#form-page-remove"><i class="fas fa-trash-alt" ></i></button>
+                            </td>
+                        </tr>
+                    {/section}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

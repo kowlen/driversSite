@@ -1,0 +1,94 @@
+html,
+body {
+  height: 100%;
+}
+
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+body {
+  /*padding-top: 5rem;*/
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.alert {
+  right: 0;
+  bottom: 0;
+  margin-right: 15px;
+  z-index: 9999;
+}
+
+@font-face {
+  font-family: Montserrat; /* Гарнитура шрифта */
+  src: url(/templates/static/fonts/montserrat/montserrat.ttf); /* Путь к файлу со шрифтом */
+}
+
+html {
+  font-family: Montserrat;
+}
+.question_label{
+  font-size: 20pt;
+  font-weight: 700;
+  color: #f0f0f0;
+  margin-top: 40px;
+}
+.btn-mist{
+  color: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  margin: 5px 20px;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.btn-mist:hover{
+  color: #f0f0f0;
+  border: 1px solid #9b9b9b;
+}
+.logo{
+  width: 60%;
+}
+@media (orientation: portrait)
+{
+  .logo{
+    width: 100%;
+  }
+}

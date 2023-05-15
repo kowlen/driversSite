@@ -1,0 +1,36 @@
+<script src="/templates/adminstys.admin.js"></script>
+<div class="starter-template">
+    <div class="row justify-content-between mb-5 align-items-center">
+        <div class="col-1">
+            <h1>Вкус</h1>
+        </div>
+        <div class="col-1">
+            <button class="btn btn-primary  my-2 my-sm-0 btn-sm" data-toggle="modal" data-target="#form-tasty-create"><i class="fas fa-plus"></i></button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Наименование</th>
+                        <th scope="col">Действия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {section name=i loop=$tastys}
+                        <tr>
+                            <th scope="row" id="item-tasty-id-{$tastys[i]['id']}">{$tastys[i]['id']}</th>
+                            <td id="item-tasty-name-{$tastys[i]['id']}">{$tastys[i]['name']}</td>
+                            <td>
+                                <button class="btn btn-warning btn-sm" onclick="tastyFormOpen({$tastys[i]['id']})"><i class="fas fa-edit"></i></button>
+                                <button class="btn btn-danger btn-sm" onclick="tastyFormRemoveOpen({$tastys[i]['id']})" data-toggle="modal" data-target="#form-tasty-remove"><i class="fas fa-trash-alt" ></i></button>
+                            </td>
+                        </tr>
+                    {/section}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

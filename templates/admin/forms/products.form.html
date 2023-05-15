@@ -1,0 +1,115 @@
+<div class="modal fade bd-example-modal-lg" id="form-product-create" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Новый товар</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-lg-4">
+                            <label for="form-product-category" class="col-form-label">Категория*:</label>
+                            <select class="form-control" id="form-product-category">
+                                {section name=i loop=$categories}
+                                    <option value="{$categories[i]['id']}" {if isset($smarty.get.filter_category) && $smarty.get.filter_category == $categories[i]['id']}selected{/if}>{$categories[i]['name']}</option>
+                                {/section}
+                            </select>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="form-product-name" class="col-form-label">Наименование*:</label>
+                            <input type="text" class="form-control " id="form-product-name" required>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="form-product-runame" class="col-form-label">runame:</label>
+                            <input type="text" class="form-control " id="form-product-runame" required>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label for="form-product-barcode" class="col-form-label">barcode*:</label>
+                            <input type="text" class="form-control " id="form-product-barcode" required>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label for="form-product-brand" class="col-form-label">Брэнд*:</label>
+                            <select class="form-control" id="form-product-brand">
+                                {section name=i loop=$brands}
+                                    <option value="{$brands[i]['id']}" {if isset($smarty.get.filter_brand) && $smarty.get.filter_brand == $brands[i]['id']}selected{/if}>{$brands[i]['name']}</option>
+                                {/section}
+                            </select>
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <label for="form-product-price" class="col-form-label">price*:</label>
+                            <input type="text" class="form-control " id="form-product-price" required>
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <label for="form-product-price-retail" class="col-form-label">price_retail*:</label>
+                            <input type="text" class="form-control " id="form-product-price-retail" required>
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <label for="form-product-count" class="col-form-label">count*:</label>
+                            <input type="text" class="form-control " id="form-product-count" required>
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <label for="form-product-sort" class="col-form-label">sort*:</label>
+                            <input type="text" class="form-control " id="form-product-sort" required>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label for="form-product-taste" class="col-form-label">Вкус:</label>
+                            <select class="form-control" id="form-product-tasty">
+                                <option value=""></option>
+                                {section name=i loop=$tastys}
+                                    <option value="{$tastys[i]['id']}">{$tastys[i]['name']}</option>
+                                {/section}
+                            </select>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label for="form-product-weight" class="col-form-label">Тяжесть:</label>
+                            <select class="form-control" id="form-product-weight">
+                                <option value=""></option>
+                                {section name=i loop=$weights}
+                                    <option value="{$weights[i]['id']}">{$weights[i]['name']}</option>
+                                {/section}
+                            </select>
+                        </div>
+                        <div class="col-lg-2 pl-2">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="form-product-is-tobacco">
+                                <label class="form-check-label" for="form-product-is-tobacco">Табак</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 pl-2">
+                            <div class="form-check">
+                                <input type="checkbox" checked="" class="form-check-input" id="form-product-vis">
+                                <label class="form-check-label" for="form-product-vis">Видимость</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-primary" id="form-product-btn-save" onclick="productFormSave('create')">Сохранить</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="form-product-remove" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Удалить?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Удалить <b id="form-product-remove-id">№1</b>?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-danger" id="form-product-remove-btn-accept">Удалить</button>
+            </div>
+        </div>
+    </div>
+</div>

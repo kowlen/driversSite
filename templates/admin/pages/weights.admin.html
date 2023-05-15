@@ -1,0 +1,36 @@
+<script src="/templates/adminights.admin.js"></script>
+<div class="starter-template">
+    <div class="row justify-content-between mb-5 align-items-center">
+        <div class="col-1">
+            <h1>Тяжесть</h1>
+        </div>
+        <div class="col-1">
+            <button class="btn btn-primary  my-2 my-sm-0 btn-sm" data-toggle="modal" data-target="#form-weight-create"><i class="fas fa-plus"></i></button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Наименование</th>
+                        <th scope="col">Действия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {section name=i loop=$weights}
+                        <tr>
+                            <th scope="row" id="item-weight-id-{$weights[i]['id']}">{$weights[i]['id']}</th>
+                            <td id="item-weight-name-{$weights[i]['id']}">{$weights[i]['name']}</td>
+                            <td>
+                                <button class="btn btn-warning btn-sm" onclick="weightFormOpen({$weights[i]['id']})"><i class="fas fa-edit"></i></button>
+                                <button class="btn btn-danger btn-sm" onclick="weightFormRemoveOpen({$weights[i]['id']})" data-toggle="modal" data-target="#form-weight-remove"><i class="fas fa-trash-alt" ></i></button>
+                            </td>
+                        </tr>
+                    {/section}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

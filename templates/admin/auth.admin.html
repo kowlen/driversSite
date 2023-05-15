@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+  {include file="/templates/admin/head.admin.html"}
+
+  <body class="text-center">
+
+    <form class="form-signin" method="post">
+      {if isset($badLogin) && $badLogin}
+        <div class="alert alert-danger" role="alert">
+          Неверный <strong>Логин</strong> или <strong>Пароль</strong>
+        </div>
+      {/if}
+      {if isset($isBanned) && $isBanned}
+        <div class="alert alert-warning" role="alert">
+          Вы забанены
+        </div>
+      {/if}
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="text" id="inputEmail" name="login" class="form-control" value="{if isset($lastlogin)}{$lastlogin}{/if}" placeholder="Login" required autofocus>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" name="pwd" class="form-control" placeholder="Password" required>
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>
+  </body>
+</html>

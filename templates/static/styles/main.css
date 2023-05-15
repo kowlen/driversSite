@@ -1,0 +1,8 @@
+.v-error{
+    border: 1px solid #f99d9d !important;
+}
+
+.error{
+    color: #e95c5c;
+    font-size: 0.8rem;
+}

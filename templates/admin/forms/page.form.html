@@ -1,0 +1,67 @@
+<div class="modal fade bd-example-modal-lg" id="form-page-create" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Создать страницу</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-lg-4">
+                            <label for="form-page-name" class="col-form-label">name*:</label>
+                            <input type="text" class="form-control " id="form-page-name" required>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="form-page-title" class="col-form-label">title:</label>
+                            <input type="text" class="form-control " id="form-page-title">
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="form-page-description" class="col-form-label">description:</label>
+                            <input type="text" class="form-control " id="form-page-description">
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label for="form-page-content" class="col-form-label">content:</label>
+                            <textarea class="form-control " id="form-page-content"></textarea>
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label for="form-page-keywords" class="col-form-label">keywords:</label>
+                            <textarea class="form-control " id="form-page-keywords"></textarea>
+                        </div>
+                        <div class="col-lg-12 pl-2">
+                            <div class="form-check">
+                                <input type="checkbox" checked class="form-check-input" id="form-page-visible">
+                                <label class="form-check-label" for="form-page-visible">Видимость</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-primary" id="form-page-btn-save" onclick="pageFormSave('create')">Сохранить</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="form-page-remove" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Удалить?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Удалить страницу <b id="form-page-remove-id">№1</b>?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-danger" id="form-page-remove-btn-accept">Удалить</button>
+            </div>
+        </div>
+    </div>
+</div>

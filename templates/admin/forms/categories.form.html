@@ -1,0 +1,72 @@
+<div class="modal fade bd-example-modal-lg" id="form-category-create" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Создать категорию</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-lg-4">
+                            <label for="form-category-pid" class="col-form-label">pid:</label>
+                            <select class="form-control" id="form-category-pid">
+                                <option value=""></option>
+                                {section name=i loop=$categories}
+                                    <option value="{$categories[i]['id']}">{$categories[i]['name']}</option>
+                                {/section}
+                            </select>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="form-category-name" class="col-form-label">Наименование*:</label>
+                            <input type="text" class="form-control " id="form-category-name" required>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="form-category-description" class="col-form-label">Описание:</label>
+                            <input type="text" class="form-control " id="form-category-description">
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label for="form-category-logo" class="col-form-label">logo:</label>
+                            <input type="text" class="form-control " id="form-category-logo">
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label for="form-category-url" class="col-form-label">url:</label>
+                            <input type="text" class="form-control " id="form-category-url">
+                        </div>
+                        <div class="col-lg-12 pl-2">
+                            <div class="form-check">
+                                <input type="checkbox" checked class="form-check-input" id="form-category-visible">
+                                <label class="form-check-label" for="form-category-visible">Видимость</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-primary" id="form-category-btn-save" onclick="categoryFormSave('create')">Сохранить</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="form-category-remove" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Удалить?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Удалить категорию <b id="form-category-remove-id">№1</b>?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-danger" id="form-category-remove-btn-accept">Удалить</button>
+            </div>
+        </div>
+    </div>
+</div>

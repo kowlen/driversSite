@@ -1,0 +1,45 @@
+<script src="/templates/adminands.admin.js"></script>
+<div class="starter-template">
+    <div class="row justify-content-between mb-5 align-items-center">
+        <div class="col-1">
+            <h1>Брэнды</h1>
+        </div>
+        <div class="col-1">
+            <button class="btn btn-primary  my-2 my-sm-0 btn-sm" data-toggle="modal" data-target="#form-brand-create"><i class="fas fa-plus"></i></button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Наименование</th>
+                        <th scope="col">Категория</th>
+                        <th scope="col">Видимость</th>
+                        <th scope="col">Действия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {section name=i loop=$brands}
+                        <tr>
+                            <th scope="row" id="item-brand-id-{$brands[i]['id']}">{$brands[i]['id']}</th>
+                            <td id="item-brand-name-{$brands[i]['id']}">{$brands[i]['name']}</td>
+                            <td>{$brands[i]['category_name']}</td>
+                            <td>
+                                <input  id="item-brand-visible-{$brands[i]['id']}" type="checkbox" disabled {if $brands[i]['vis']} checked{/if}>
+                            </td>
+                            <td>
+                                <button class="btn btn-warning btn-sm" onclick="brandFormOpen({$brands[i]['id']})"><i class="fas fa-edit"></i></button>
+                                <button class="btn btn-danger btn-sm" onclick="brandFormRemoveOpen({$brands[i]['id']})" data-toggle="modal" data-target="#form-brand-remove"><i class="fas fa-trash-alt" ></i></button>
+                            </td>
+                            <td class="d-none">
+                                <p id="item-brand-category-{$brands[i]['id']}">{$brands[i]['cat_id']}</p>
+                            </td>
+                        </tr>
+                    {/section}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,84 @@
+<?php
+require_once('/configs/conf.php');
+require_once('/configs/autoload.php');
+class Category_Controller extends TinyMVC_Controller
+{
+    public $controller = 'category';
+    public $controllerName = 'Раздел';
+
+    function index(){
+        $this->load->model('Db_MySQL_Model','db');
+        $this->load->model('Access_Model','access');
+        $this->load->model('Data_Model','data');
+        $menu = $this->access->get_menu();
+
+        $cat_id = (isset($_GET['c']) && !empty($_GET['c'])) ? $_GET['c'] : 'tales';
+        $data_desc = $this->data->get_category_info($cat_id);
+        $data = $this->data->get_category_posts($data_desc['id']);
+
+        $title = $data_desc['name'];
+        $this->smarty->assign("title", $title);
+        $this->smarty->assign("data_desc", $data_desc);
+        //$this->smarty->assign("htpath", $htpath);
+        $data_path = $this->data->get_menu_path($data_desc['id']);
+        $this->smarty->assign("htpath", $data_path);
+        $this->smarty->assign("menu", $menu);
+        $this->smarty->assign("data", $data);
+        $this->smarty->assign("main_content_template", "templates/getup/".template.'/'.$this->controller."/main.html");
+        $this->smarty->display('/templates/getup/'.template.'/index.html');
+    }
+
+    function view_post(){
+        $this->load->model('Db_MySQL_Model','db');
+        $this->load->model('Access_Model','access');
+        $this->load->model('Data_Model','data');
+        $menu = $this->access->get_menu();
+
+        $id = (isset($_GET['p']) && !empty($_GET['p'])) ? $_GET['p'] : die('no data');
+
+        $data = $this->data->get_post($id);
+        $data_desc = $this->data->get_categoryId_info($data['cat_id']);
+
+        $title = $data['name'];
+
+        $this->smarty->assign("title", $title);
+        $this->smarty->assign("data_desc", $data_desc);
+        $data_path = $this->data->get_menu_path($data_desc['id']);
+        $data_path[] = array('name'=>$data['name'], 'url'=>'');
+        $this->smarty->assign("htpath", $data_path);
+        $this->smarty->assign("menu", $menu);
+        $this->smarty->assign("data", $data);
+        $this->smarty->assign("main_content_template", "templates/getup/".template.'/'.$this->controller."/post.html");
+        $this->smarty->display('/templates/getup/'.template.'/index.html');
+    }
+
+    function find(){
+        $this->load->model('Db_MySQL_Model','db');
+        $this->load->model('Access_Model','access');
+        $this->load->model('Data_Model','data');
+        $menu = $this->access->get_menu();
+
+        if (isset($_POST['find']) && !empty($_POST['find'])) {
+            $find = $_POST['find'];
+            $data = $this->data->get_post_find($find);
+            $data_desc = array('text'=>'Результаты поиска по запросу: <h2>'.$find.'</h2>');//$this->data->get_categoryId_info($data['cat_id']);
+        }else{
+            $data = array();
+            $data_desc = array('text'=>'Укажите фразу для поиска...');
+        }
+
+        $title = 'Поиск по сайту';
+
+        $this->smarty->assign("title", $title);
+        $this->smarty->assign("data_desc", $data_desc);
+        $data_path = $this->data->get_menu_path();
+        $data_path[] = array('name'=>$title, 'url'=>'');
+        $this->smarty->assign("htpath", $data_path);
+        $this->smarty->assign("menu", $menu);
+        $this->smarty->assign("data", $data);
+        $this->smarty->assign("main_content_template", "templates/getup/".template.'/'.$this->controller."/main.html");
+        $this->smarty->display('/templates/getup/'.template.'/index.html');
+    }
+
+}
+?>
