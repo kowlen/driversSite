@@ -61,9 +61,9 @@ class Admin_Controller extends TinyMVC_Controller
         $pages = $this->gate->getPages(true);
 
         //vars path to files
-        $form_path = "getup/getup/admin/forms/page.form.html";
-        $content_path = "getup/getup/admin/pages/pages.admin.html";
-        $template_path = "getup/getup/admin/template.admin.html";
+        $form_path = "/templates/admin/forms/page.form.html";
+        $content_path = "/templates/admin/pages/pages.admin.html";
+        $template_path = "/templates/admin/template.admin.html";
 
         //assigns vars to template
         $this->smarty->assign("title", $title);
@@ -83,9 +83,9 @@ class Admin_Controller extends TinyMVC_Controller
         $categories = $this->gate->getCategories(false);
 
         //vars path to files
-        $form_path = "getup/getup/admin/forms/brands.form.html";
-        $content_path = "getup/getup/admin/pages/brands.admin.html";
-        $template_path = "getup/getup/admin/template.admin.html";
+        $form_path = "/templates/admin/forms/brands.form.html";
+        $content_path = "/templates/admin/pages/brands.admin.html";
+        $template_path = "/templates/admin/template.admin.html";
 
         //assigns vars to template
         $this->smarty->assign("brands", $brands);
@@ -106,9 +106,9 @@ class Admin_Controller extends TinyMVC_Controller
         $categories = $this->gate->getCategories(true);
 
         //vars path to files
-        $form_path = "getup/getup/admin/forms/categories.form.html";
-        $content_path = "getup/getup/admin/pages/categories.admin.html";
-        $template_path = "getup/getup/admin/template.admin.html";
+        $form_path = "/templates/admin/forms/categories.form.html";
+        $content_path = "/templates/admin/pages/categories.admin.html";
+        $template_path = "/templates/admin/template.admin.html";
 
         //assigns vars to template
         $this->smarty->assign("title", $title);
@@ -127,9 +127,9 @@ class Admin_Controller extends TinyMVC_Controller
         $tastys = $this->gate->getTastys();
 
         //vars path to files
-        $form_path = "getup/getup/admin/forms/tastys.form.html";
-        $content_path = "getup/getup/admin/pages/tastys.admin.html";
-        $template_path = "getup/getup/admin/template.admin.html";
+        $form_path = "/templates/admin/forms/tastys.form.html";
+        $content_path = "/templates/admin/pages/tastys.admin.html";
+        $template_path = "/templates/admin/template.admin.html";
 
         //assigns vars to template
         $this->smarty->assign("title", $title);
@@ -148,9 +148,9 @@ class Admin_Controller extends TinyMVC_Controller
         $weights = $this->gate->getWeights();
 
         //vars path to files
-        $form_path = "getup/getup/admin/forms/weights.form.html";
-        $content_path = "getup/getup/admin/pages/weights.admin.html";
-        $template_path = "getup/getup/admin/template.admin.html";
+        $form_path = "/templates/admin/forms/weights.form.html";
+        $content_path = "/templates/admin/pages/weights.admin.html";
+        $template_path = "/templates/admin/template.admin.html";
 
         //assigns vars to template
         $this->smarty->assign("title", $title);
@@ -181,9 +181,9 @@ class Admin_Controller extends TinyMVC_Controller
         $weights = $this->gate->getWeights();
 
         //vars path to files
-        $form_path = "getup/getup/admin/forms/products.form.html";
-        $content_path = "getup/getup/admin/pages/products.admin.html";
-        $template_path = "getup/getup/admin/template.admin.html";
+        $form_path = "/templates/admin/forms/products.form.html";
+        $content_path = "/templates/admin/pages/products.admin.html";
+        $template_path = "/templates/admin/template.admin.html";
 
         //assigns vars to template
         $this->smarty->assign("products", $products);
@@ -227,9 +227,9 @@ class Admin_Controller extends TinyMVC_Controller
             $products = $this->gate->getProducts(false,true);
 
             //vars path to files
-            $form_path = "getup/getup/admin/forms/registry.form.html";
-            $content_path = "getup/getup/admin/pages/registry.admin.html";
-            $template_path = "getup/getup/admin/template.admin.html";
+            $form_path = "/templates/admin/forms/registry.form.html";
+            $content_path = "/templates/admin/pages/registry.admin.html";
+            $template_path = "/templates/admin/template.admin.html";
 
             //assigns vars to template
             $this->smarty->assign("title", $title);
@@ -249,9 +249,9 @@ class Admin_Controller extends TinyMVC_Controller
         $orders = $this->gate->getProducts(false,true);
 
         //vars path to files
-        $form_path = "getup/getup/admin/forms/registry.form.html";
-        $content_path = "getup/getup/admin/pages/registry.admin.html";
-        $template_path = "getup/getup/admin/template.admin.html";
+        $form_path = "/templates/admin/forms/registry.form.html";
+        $content_path = "/templates/admin/pages/registry.admin.html";
+        $template_path = "/templates/admin/template.admin.html";
 
         //assigns vars to template
         $this->smarty->assign("title", $title);
