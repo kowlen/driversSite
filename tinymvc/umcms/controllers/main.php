@@ -5,21 +5,7 @@ class Main_Controller extends TinyMVC_Controller
 {
     public $controller = 'main';
     function index(){
-        $this->load->model('Db_MySQL_Model','db');
-        $this->load->model('Access_Model','access');
-        $this->load->model('Data_Model','data');
-        $menu = $this->access->get_menu();
-
-        $title = 'Главная';
-
-        $data_path = $this->data->get_menu_path();
-        //print_r($data_path);die();
-        $this->smarty->assign("htpath", $data_path);
-
-        $this->smarty->assign("menu", $menu);
-        $this->smarty->assign("title", $title);
-        $this->smarty->assign("main_content_template", "templates/getup/".template."/main.html");
-        $this->smarty->display('/templates/getup/'.template.'/index.html');
+        $this->smarty->display('/templates/main/index.main.html');
     }
 
     function dummy(){
@@ -34,6 +20,10 @@ class Main_Controller extends TinyMVC_Controller
         $this->smarty->assign("htpath", $htpath);
         $this->smarty->assign("main_content_template", "templates/getup/".template."/dummy.html");
         $this->smarty->display('/templates/getup/'.template.'/index.html');
+    }
+
+    function mainpage(){
+        $this->smarty->display('/templates/mian/index.main.html');
     }
 
 
