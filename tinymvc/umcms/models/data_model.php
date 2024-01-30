@@ -15,16 +15,19 @@ class Data_Model extends TinyMVC_Model
         return $this->db->go_result_once("select * from category where enable = 1 and id = '".$catId."'");
     }
 
-    function get_category_posts($catId){
+    function get_category_posts($catId, $pageTo){
+
+        $pagi = ' limit '.(int)$pageTo.', '.postPerPage;
         $cats_id = $this->get_sub($catId);
         $data = $this->db->go_result("select 
         (select concat('<a href=','/category/?c=', url,'>', name, '</a>') from `category` where id = (select pid from `category` where id = t.cat_id)) as `pid_name`,
         (select concat('<a href=','/category/?c=', url,'>', name, '</a>') from `category` where id = t.cat_id) as `cat_name`,
-        views, rate, id, haterate, dat, autor, CONCAT(LEFT(`text`, 100000), '...') text_short, CONCAT(LEFT(`text`, 15000), '...') text_short2, name from posts t where `show` = 1 and `del` = 0 and cat_id in (".$cats_id.")");
-
-        foreach ($data as $key => $value) {
-            $data[$key]['text_short'] = $this->utl->truncate($data[$key]['text_short'], 600);
-            $data[$key]['text_short2'] = ($data[$key]['text_short2']);
+        views, rate, id, haterate, dat, autor, CONCAT(LEFT(`text`, 100000), '...') text_short, CONCAT(LEFT(`text`, 15000), '...') text_short2, name from posts t where `show` = 1 and `del` = 0 and cat_id in (".$cats_id.") $pagi");
+        if ($data){
+            foreach ($data as $key => $value) {
+                $data[$key]['text_short'] = $this->utl->truncate($data[$key]['text_short'], 600);
+                $data[$key]['text_short2'] = ($data[$key]['text_short2']);
+            }
         }
 
         return $data;
@@ -55,6 +58,10 @@ class Data_Model extends TinyMVC_Model
 
     function get_post($postId){
         return $this->db->go_result_once("select * from posts where `show` = 1 and `del` = 0 and id = '".$postId."'");
+    }
+
+    function pagi_get_total_post($catId){
+        return $this->db->go_result_once("select count(*) total from posts where `show` = 1 and `del` = 0 and `cat_id` = (select id from category where enable = 1 and url = '".$catId."' limit 1)")['total'];
     }
 
     function get_page($id){

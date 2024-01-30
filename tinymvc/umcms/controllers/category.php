@@ -13,8 +13,20 @@ class Category_Controller extends TinyMVC_Controller
         $menu = $this->access->get_menu();
 
         $cat_id = (isset($_GET['c']) && !empty($_GET['c'])) ? $_GET['c'] : 'tales';
+        $currentPage = (isset($_GET['page']) && !empty($_GET['page']))  ? (int)$_GET['page'] : 1;
+
         $data_desc = $this->data->get_category_info($cat_id);
-        $data = $this->data->get_category_posts($data_desc['id']);
+
+        //pagination
+        $total = $this->data->pagi_get_total_post($cat_id);
+        $totalPages = ceil($total / postPerPage);
+        $postTo = ($currentPage - 1) * postPerPage;
+        //pagiVis
+        $startPage = max(1, $currentPage - floor(maxVisPages / 2));
+        $endPage = min($startPage + maxVisPages - 1, $totalPages);
+        //$firstRecordIndex = ($currentPage - 1) * postPerPage;
+
+        $data = $this->data->get_category_posts($data_desc['id'], $postTo);
 
         $title = $data_desc['name'];
         $this->smarty->assign("title", $title);
@@ -24,6 +36,10 @@ class Category_Controller extends TinyMVC_Controller
         $this->smarty->assign("htpath", $data_path);
         $this->smarty->assign("menu", $menu);
         $this->smarty->assign("data", $data);
+        $this->smarty->assign("totalPages", $totalPages);
+        $this->smarty->assign("currentPage", $currentPage);
+        $this->smarty->assign("startPage", $startPage);
+        $this->smarty->assign("endPage", $endPage);
         $this->smarty->assign("main_content_template", "templates/getup/".template.'/'.$this->controller."/main.html");
         $this->smarty->display('/templates/getup/'.template.'/index.html');
     }
@@ -33,8 +49,7 @@ class Category_Controller extends TinyMVC_Controller
         $this->load->model('Access_Model','access');
         $this->load->model('Data_Model','data');
         $menu = $this->access->get_menu();
-
-        $id = (isset($_GET['p']) && !empty($_GET['p'])) ? $_GET['p'] : die('no data');
+        $id = (isset($_GET['p']) && !empty($_GET['p'])) ? (int)$_GET['p'] : die('no data');
 
         $data = $this->data->get_post($id);
         $data_desc = $this->data->get_categoryId_info($data['cat_id']);

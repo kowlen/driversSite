@@ -1,0 +1,35 @@
+        <div class="row" style="background: #26292e;padding: 30px">
+            {if $data}
+                    <div class="span9 mb-5" style="margin: 0;">
+                        <div class="card" style="">
+                            <div class="card-body">
+                                <div class="row mb-2">
+                                    {*<div class="span4"><b>Автор:</b> <span class="red">{$data['autor']}</span></div>*}
+                                    <div class="span5 ta-right"><b>Дата:</b> <span class="red">{$data['dat']}</span></div>
+                                </div>
+                                <h3 class="red"><a href="/category/view_post?p={$data['id']}">{$data['name']}</a></h3>
+                                <p class="card-text" id="">
+                                    {$data['text']}
+                                </p>
+                                <div class="row">
+                                    <div class="span9"><b>Теги:</b>
+                                        <a href="">Раз</a>,
+                                        <a href="">Два</a>,
+                                        <a href="">Три</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="span9"><b>Категория:</b> <a href="/category/?c={$data_desc['url']}">{$data_desc['name']}</a></div>
+                                    <div class="span9 ta-right"><b>Просмотры:</b> <span class="red">{$data['views']}</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            {else}
+                Упс!
+                <h3 class="red"><a href="/">Что-то пошло не так...</a></h3>
+            {/if}
+        </div>
+
+
+

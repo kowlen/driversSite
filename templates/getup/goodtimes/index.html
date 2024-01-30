@@ -26,18 +26,18 @@
                 {if $menu}
                     {foreach from=$menu key=k item=v name=foo}
                         <li class="nav-item mt-1">
-                            <a class="nav-link {if isset($v['childs'])}dropdown-toggle{/if}" href="{if isset($v['childs'])}#{else}/category/?c={$v['url']}{/if}" role="button" id="dropdownMenuLink" {if isset($v['childs'])}data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{/if}>
+                            <a class="nav-link {if isset($v['childs'])}dropdown-toggle{/if}" href="{if isset($v['childs'])}#{else}/category/{$v['url']}/{/if}" role="button" id="dropdownMenuLink" {if isset($v['childs'])}data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{/if}>
                                 {$v['name']}
                             </a>
                             {if isset($v['childs'])}
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                     {foreach from=$v['childs'] key=key item=sub name=foo}
-                                        <a class="dropdown-item" href="/category/?c={$sub['url']}">{$sub['name']}</a>
+                                        <a class="dropdown-item" href="/category/{$sub['url']}/">{$sub['name']}</a>
                                     {/foreach}
                                 </div>
                             {else}
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <a class="dropdown-item" href="/category/?c={$v['url']}">Перейти</a>
+                                    <a class="dropdown-item" href="/category/{$v['url']}/">Перейти</a>
                                 </div>
                             {/if}
                         </li>

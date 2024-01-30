@@ -31,4 +31,6 @@ RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [R=301,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php/$1 [PT,L,QSA]
-RewriteRule photos/emp_(.*).jpg$ /gate/getEmployeePhoto/?employeeId=$1 [L]
+
+#RewriteRule post/(.*)/$ /category/view_post/?p=$1 [L]
+#RewriteRule category/(.*)/$ /category/?c=$1 [L]

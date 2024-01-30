@@ -1,0 +1,136 @@
+html, body {
+    height:100%;
+    position:relative;
+    overflow-x:hidden;
+}
+
+body {
+    overflow:hidden;
+    height:auto;
+    min-height:100%;
+}
+
+.page {
+    margin:0 auto 40px;
+}
+
+.row{
+    font-size: 14px;
+}
+
+.footer {
+    height:40px;
+    width:100%;
+    position:absolute;
+    bottom:0;
+    font-size: 12px;
+}
+
+.text{
+    padding: 10px 0;
+}
+
+.bg-viola{
+    background: #4e307e;
+}
+
+.bg-viola-light{
+    background: #eee4ff;
+}
+
+.bg-viola_text{
+    color: #fff;
+    padding: 10px;
+}
+
+.all{
+
+}
+
+.ta-right{
+    text-align: right;
+}
+
+.ta-center{
+    text-align: center;
+}
+
+.table tbody tr:hover{
+    background: #f0e7ff;
+    cursor: pointer;
+    /*color: #fff;*/
+}
+
+.btn-outline-white {
+    color: #f3fdf8;
+    border-color: #fafafb;
+}
+
+.header_text {
+    color: #4e307e;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.header_table{
+    color: #4e307e;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+h2{
+    color: #4e307e;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.navigation{
+    border: 1px solid #c6b2e7;
+    background: #f9f8f8;
+    /*border-radius: 3px;*/
+    font-size: 16px;
+    font-weight: 700;
+    padding: 5px 10px;
+    /*margin: 10px 0;*/
+    color: #4e3086;
+}
+
+.clean_link{
+    text-decoration: none;
+}
+
+.card-img-top{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.hide {
+    height: 40px;
+    width: auto;
+    border: 1px solid #c1c1c1;
+    margin: 10px 0px -1px 0px;
+    background: #eeecec;
+    cursor: pointer;
+    padding: 5px 5px 0px 5px;
+    text-align: center;
+}
+
+.spoilerbody {
+    border: 1px solid #c1c1c1;
+    background: #f5f4f4;
+    padding: 10px 10px;
+}
+
+.fancy_img{
+    max-width: 100%;
+}
+
+.card-text{
+    text-align: center;
+}
+
+
+

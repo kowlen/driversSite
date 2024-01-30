@@ -2,9 +2,111 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ce7ba0e-28a1-4168-9b25-45aa595013a5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/css/bootstrap-responsive.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/css/fancybox/blank.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/css/fancybox/fancybox_loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/css/fancybox/fancybox_overlay.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/css/fancybox/fancybox_sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/css/fancybox/jquery.fancybox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/css/fonts.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/css/fonts/Icons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/css/fonts/Icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/css/fonts/Icons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/css/fonts/Icons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/css/responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/css/shortcodes.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/css/supersized.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/css/supersized.shutter.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/filter-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/filter-icon_@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/logo — копия (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/logo2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/logo_@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/menu-mobile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/menu-mobile_@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/profile/profile-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/profile/profile-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/profile/profile-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/slider-images/image01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/slider-images/image02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/slider-images/image03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/slider-images/image04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/supersized/back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/supersized/bg-black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/supersized/bg-hover.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/supersized/button-tray-down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/supersized/button-tray-up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/supersized/forward.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/supersized/nav-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/supersized/nav-dot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/supersized/pause.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/supersized/play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/supersized/progress-back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/supersized/progress-bar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/supersized/progress.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/supersized/supersized-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/supersized/thumb-back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/supersized/thumb-forward.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/work/full/image-01-full.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/work/full/image-02-full.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/work/full/image-03-full.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/work/full/image-04-full.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/work/full/image-05-full.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/work/full/image-06-full.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/work/full/image-07-full.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/work/thumbs/image-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/work/thumbs/image-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/work/thumbs/image-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/work/thumbs/image-04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/work/thumbs/image-05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/work/thumbs/image-06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/work/thumbs/image-07.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/work/thumbs/image-08.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/img/work/thumbs/image-09.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/js/jquery.fancybox-media.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/js/jquery.fancybox.pack.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/js/jquery.isotope.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/js/modernizr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/js/placeholder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/js/plugins.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/js/supersized.3.2.7.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/js/waypoints-sticky.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/js/waypoints.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/php/contact.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/audio/audiotales.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/audio/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/category/audiotales.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/category/find.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/category/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/category/post.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/dummy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/head.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/pages/pages.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/reading/audiotales.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/reading/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/getup/unclestore/styles/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/template.admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/template.admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tinymvc/umcms/controllers/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/tinymvc/umcms/controllers/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/conf.php" beforeDir="false" afterPath="$PROJECT_DIR$/configs/conf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/06e8eb180ac35f1d6c0b76cd14b0f2a988d8e900_0.file.pages.html.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/346887524b76f2cd445d16c92961cc2ab128f198_0.file.index.html.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/37e079482dd13657911161d86a5a1f5af216abaf_0.file.404.getup.php" beforeDir="false" afterPath="$PROJECT_DIR$/temp/37e079482dd13657911161d86a5a1f5af216abaf_0.file.404.getup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/4b3cb209de9f94acd0fde9b625a6b937ff3cc9cb_0.file.main.html.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/5470a951d0690155a987a32ad50f689c7f0a6223_0.file.mainhead.html.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/724c0aa1cddd8556e04ece99ba4cf7895842afdb_0.file.head.admin.html.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/75aa5cadbb8339e949c34b8bf0681acf7e75c7a4_0.file.main.html.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/76d17416e3adbcfd6acf7f54517eb4adb709a425_0.file.auth.admin.html.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/getup/goodtimes/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/getup/goodtimes/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tinymvc/umcms/controllers/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/tinymvc/umcms/controllers/category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tinymvc/umcms/models/access_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/tinymvc/umcms/models/access_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tinymvc/umcms/models/data_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/tinymvc/umcms/models/data_model.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,23 +136,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Apache24/htdocs_bizum/templates/getup/goodtimes/pages&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Apache24/htdocs_bizum/templates/getup/unclestore",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Apache24\htdocs_bizum\templates\getup\unclestore" />
+      <recent name="C:\Apache24\htdocs_bizum\templates\getup" />
       <recent name="C:\Apache24\htdocs_bizum\templates\getup\goodtimes\pages" />
       <recent name="C:\Apache24\htdocs_bizum\tinymvc\umcms\controllers" />
       <recent name="C:\Apache24\htdocs_bizum\upload" />
-      <recent name="C:\Apache24\htdocs_bizum\templates\static\styles" />
-      <recent name="C:\Apache24\htdocs_bizum\templates\static\plugins" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Apache24\htdocs_bizum\templates\getup\goodtimes\audio" />
@@ -97,7 +199,14 @@
       <workItem from="1667120212516" duration="3921000" />
       <workItem from="1677417239870" duration="3262000" />
       <workItem from="1684156593435" duration="8823000" />
-      <workItem from="1684755093677" duration="1043000" />
+      <workItem from="1684755093677" duration="2184000" />
+      <workItem from="1685280696622" duration="603000" />
+      <workItem from="1685963617395" duration="443000" />
+      <workItem from="1686112087667" duration="20000" />
+      <workItem from="1705065997992" duration="709000" />
+      <workItem from="1705073754518" duration="4906000" />
+      <workItem from="1705550108569" duration="35000" />
+      <workItem from="1706496549862" duration="26539000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1653931004037</created>
@@ -183,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684755111909</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Fix">
+      <created>1684757337880</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1684757337880</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
