@@ -10,13 +10,11 @@ class Category_Controller extends TinyMVC_Controller
         $this->load->model('Db_MySQL_Model','db');
         $this->load->model('Access_Model','access');
         $this->load->model('Data_Model','data');
-        $menu = $this->access->get_menu();
-
         $cat_id = (isset($_GET['c']) && !empty($_GET['c'])) ? $_GET['c'] : 'tales';
         $currentPage = (isset($_GET['page']) && !empty($_GET['page']))  ? (int)$_GET['page'] : 1;
-
+        $menu = $this->access->get_menu();
+        $menuSub = $this->access->get_menu_sub($cat_id);
         $data_desc = $this->data->get_category_info($cat_id);
-
         //pagination
         $total = $this->data->pagi_get_total_post($cat_id);
         $totalPages = ceil($total / postPerPage);
@@ -35,6 +33,7 @@ class Category_Controller extends TinyMVC_Controller
         $data_path = $this->data->get_menu_path($data_desc['id']);
         $this->smarty->assign("htpath", $data_path);
         $this->smarty->assign("menu", $menu);
+        $this->smarty->assign("menuSub", $menuSub);
         $this->smarty->assign("data", $data);
         $this->smarty->assign("totalPages", $totalPages);
         $this->smarty->assign("currentPage", $currentPage);

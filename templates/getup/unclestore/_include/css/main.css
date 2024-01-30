@@ -335,6 +335,10 @@ h3.spec {
 	text-shadow: none;	
 }
 
+.container{
+	min-height: 730px;
+}
+
 #home-slider .slide-content {
 	font-size: 60px;
 	color: #FFFFFF;

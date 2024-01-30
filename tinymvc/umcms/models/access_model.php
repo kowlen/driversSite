@@ -12,16 +12,24 @@ class Access_Model extends TinyMVC_Model
         return $cats;
     }
 
+    function get_menu_sub($catId){
+        //die("select * from category where enable = 1 and pid in (select id from category where url = $catId) order by pos");
+        $menu = $this->db->go_result("select * from category where enable = 1 and (pid in (select id from category where url = '$catId') or id in (select id from category where url = '$catId'))  order by pos");
+        $cats = $this->getTree($menu);
+        return $cats;
+    }
+
     function getTree($dataset) {
         $tree = array();
         foreach ($dataset as $id => &$node) {
             //Если нет вложений
-            if (!$node['pid']){
+            $tree[$node['id']] = &$node;
+            /*if (!$node['pid']){
                 $tree[$node['id']] = &$node;
             }else{
-                //Если есть потомки то перебераем массив
+                //Если есть потомки то перебираем массив
                 $tree[$node['pid']]['childs'][$node['id']] = &$node;
-            }
+            }*/
         }
         return $tree;
     }
