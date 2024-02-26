@@ -5,9 +5,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/getup/unclestore/_include/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/getup/unclestore/_include/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/getup/unclestore/category/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/getup/unclestore/category/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/getup/unclestore/category/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/getup/unclestore/category/post.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/getup/unclestore/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/getup/unclestore/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tinymvc/umcms/controllers/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/tinymvc/umcms/controllers/category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tinymvc/umcms/models/access_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/tinymvc/umcms/models/access_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tinymvc/umcms/models/data_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/tinymvc/umcms/models/data_model.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +110,10 @@
       <workItem from="1705065997992" duration="709000" />
       <workItem from="1705073754518" duration="4906000" />
       <workItem from="1705550108569" duration="35000" />
-      <workItem from="1706496549862" duration="28605000" />
+      <workItem from="1706496549862" duration="30590000" />
+      <workItem from="1706840781416" duration="593000" />
+      <workItem from="1706852698909" duration="1193000" />
+      <workItem from="1708911265908" duration="6980000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1653931004037</created>
@@ -208,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706626666046</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="uncleStore">
+      <created>1706628767867</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1706628767867</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

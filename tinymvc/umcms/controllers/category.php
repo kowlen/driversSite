@@ -66,6 +66,44 @@ class Category_Controller extends TinyMVC_Controller
         $this->smarty->display('/templates/getup/'.template.'/index.html');
     }
 
+    function tag(){
+        $this->load->model('Db_MySQL_Model','db');
+        $this->load->model('Access_Model','access');
+        $this->load->model('Data_Model','data');
+        $tag = (isset($_GET['c']) && !empty($_GET['c'])) ? $_GET['c'] : '';
+        $currentPage = (isset($_GET['page']) && !empty($_GET['page']))  ? (int)$_GET['page'] : 1;
+        $menu = $this->access->get_menu();
+        $menuSub = $this->access->get_menu_sub('main');
+        $data_desc['name'] = 'Поиск по тегу <b>'.$tag.'</b>';
+        $data_desc['text'] = 'Поиск по тегу <b>'.$tag.'</b>';
+        //pagination
+        $total = $this->data->pagi_get_total_tags($tag);
+        $totalPages = ceil($total / postPerPage);
+        $postTo = ($currentPage - 1) * postPerPage;
+        //pagiVis
+        $startPage = max(1, $currentPage - floor(maxVisPages / 2));
+        $endPage = min($startPage + maxVisPages - 1, $totalPages);
+        //$firstRecordIndex = ($currentPage - 1) * postPerPage;
+
+        $data = $this->data->get_category_tags($tag, $postTo);
+
+        $title = $data_desc['name'];
+        $this->smarty->assign("title", $title);
+        $this->smarty->assign("data_desc", $data_desc);
+        //$this->smarty->assign("htpath", $htpath);
+        $data_path = $this->data->get_menu_path();
+        $this->smarty->assign("htpath", $data_path);
+        $this->smarty->assign("menu", $menu);
+        $this->smarty->assign("menuSub", $menuSub);
+        $this->smarty->assign("data", $data);
+        $this->smarty->assign("totalPages", $totalPages);
+        $this->smarty->assign("currentPage", $currentPage);
+        $this->smarty->assign("startPage", $startPage);
+        $this->smarty->assign("endPage", $endPage);
+        $this->smarty->assign("main_content_template", "templates/getup/".template.'/'.$this->controller."/main.html");
+        $this->smarty->display('/templates/getup/'.template.'/index.html');
+    }
+
     function find(){
         $this->load->model('Db_MySQL_Model','db');
         $this->load->model('Access_Model','access');

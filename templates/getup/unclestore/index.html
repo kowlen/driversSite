@@ -131,8 +131,9 @@
                 </div>
             </div>
         </div>
-        {if isset($menuSub)}
+
         <div class="row">
+            {if isset($menuSub)}
             <div class="span3">
                 <!-- Filter -->
                 <nav id="options" class="work-nav">
@@ -141,7 +142,7 @@
                         {if isset($menuSub)}
                         {foreach from=$menuSub key=k item=v name=foo}
                         <li class="nav-item mt-1">
-                            <a class="nav-link {if isset($v['childs'])}dropdown-toggle{/if}" href="{if isset($v['childs'])}#{else}/category/?c={$v['url']}{/if}" role="button" id="dropdownMenuLink" {if isset($v['childs'])}data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{/if}>
+                            <a class="nav-link {if $v['pid'] > 0} ml-1{/if} {if (isset($smarty.get.c) && $v['url'] == $smarty.get.c)}red{/if} {if isset($v['childs'])}dropdown-toggle{/if}" href="{if isset($v['childs'])}#{else}/category/?c={$v['url']}{/if}" role="button" id="dropdownMenuLink" {if isset($v['childs'])}data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{/if}>
                             {$v['name']}
                             </a>
                             {if isset($v['childs'])}
@@ -204,7 +205,7 @@
 <script src="{tpl_path}_include/js/jquery.isotope.js"></script> <!-- Isotope Filter -->
 <script src="{tpl_path}_include/js/jquery.fancybox.pack.js"></script> <!-- Fancybox -->
 <script src="{tpl_path}_include/js/jquery.fancybox-media.js"></script> <!-- Fancybox for Media -->
-<script src="{tpl_path}_include/js/jquery.tweet.js"></script> <!-- Tweet -->
+<!--<script src="{tpl_path}_include/js/jquery.tweet.js"></script> &lt;!&ndash; Tweet &ndash;&gt;-->
 <script src="{tpl_path}_include/js/plugins.js"></script> <!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
 <script src="{tpl_path}_include/js/main.js"></script> <!-- Default JS -->
 <!-- End Js -->

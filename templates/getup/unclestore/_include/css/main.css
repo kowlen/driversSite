@@ -74,7 +74,11 @@ p {
 }
 
 .red {
-	color:#DE5E60;
+	color:#DE5E60 !important;
+}
+
+.ml-1{
+	padding-left: 10px;
 }
 
 hr {
@@ -336,7 +340,7 @@ h3.spec {
 }
 
 .container{
-	min-height: 730px;
+	/*min-height: 730px;*/
 }
 
 #home-slider .slide-content {
@@ -1416,4 +1420,8 @@ footer .credits {
 
 .label-desc{
 	padding: 5px 2px;
+}
+
+.description{
+	color: #7F8289;
 }

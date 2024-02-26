@@ -3,18 +3,23 @@
         <div class="row">
             {if $data}
                 {foreach from=$data item=dal}
-                <li class="item-thumbs span9 soft">
+                <li class="item-thumbs {if isset($menuSub)}span9{/if} soft">
                     <div class="row" style="padding: 0px 30px;">
                         <h3 class="red"><a href="/category/view_post?p={$dal['id']}">{$dal['name']}</a></h3>
                         <div class="label-desc2">{$dal['text_short']}</div>
                         <p></p>
                         <p class="label-desc"><b>Просмотры:</b> <span class="red">{$dal['views']}</span></p>
-
-                        <div class="col-12"><b>Теги:</b>
-                            <a href="">Раз</a>,
-                            <a href="">Два</a>,
-                            <a href="">Три</a>
-                        </div>
+                        {if $dal['tags']}
+                            <div class="col-12" style="color: #7F8289;"><b>Теги:</b>
+                                    {$dot = ''}
+                                    {foreach from=$dal['tags'] item=tags}
+                                        {if trim($tags) ne ''}
+                                            {$dot}<a href="/category/tag/?c={$tags}">{$tags}</a>
+                                            {$dot = ', '}
+                                        {/if}
+                                    {/foreach}
+                            </div>
+                        {/if}
                         <a href="/category/view_post?p={$dal['id']}" style="float:right;">Перейти</a>
                     </div>
                 </li>
@@ -32,18 +37,18 @@
                             <nav id="social">
                                 <ul>
                                     {if ($startPage > 1)}
-                                        <li {if $currentPage == 1}class="active"{/if} style="height: 30px;padding: 0;"><a href="/category/?c={$smarty.get.c}&page=1" title="Страница 1"><span class="">1</span></a></li>
+                                        <li {if $currentPage == 1}class="active"{/if} style="height: 30px;padding: 0;"><a href="?c={$smarty.get.c}&page=1" title="Страница 1"><span class="">1</span></a></li>
                                         {if ($startPage > 2)}
                                             <li style="height: 30px;padding: 0;"><a><span class="">...</span></a></li>
                                         {/if}
                                     {/if}
                                     {for $pagi=$startPage to $endPage-1}
-                                        <li {if $currentPage == $pagi}class="active"{/if} style="height: 30px;padding: 0;"><a href="/category/?c={$smarty.get.c}&page={$pagi}" title="Страница {$pagi}"><span class="">{$pagi}</span></a></li>
+                                        <li {if $currentPage == $pagi}class="active"{/if} style="height: 30px;padding: 0;"><a href="?c={$smarty.get.c}&page={$pagi}" title="Страница {$pagi}"><span class="">{$pagi}</span></a></li>
                                     {/for}
                                     {if $endPage < $totalPages}
                                         <li style="height: 30px;padding: 0;"><a><span class="">...</span></a></li>
                                     {/if}
-                                    <li {if $currentPage == $totalPages}class="active"{/if} style="height: 30px;padding: 0;"><a href="/category/?c={$smarty.get.c}&page={$totalPages}" title="Страница {$totalPages}"><span class="">{$totalPages}</span></a></li>
+                                    <li {if $currentPage == $totalPages}class="active"{/if} style="height: 30px;padding: 0;"><a href="?c={$smarty.get.c}&page={$totalPages}" title="Страница {$totalPages}"><span class="">{$totalPages}</span></a></li>
                                 </ul>
                             </nav>
                         </div>
